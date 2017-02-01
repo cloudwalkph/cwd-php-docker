@@ -540,41 +540,6 @@ To control the behavior of xDebug (in the `php-fpm` Container), you can run the 
 <a name="Production"></a>
 
 
-
-
-
-
-<br>
-<a name="LaraDock-for-Production"></a>
-### Prepare LaraDock for Production
-
-It's recommended for production to create a custom `docker-compose.yml` file. For that reason, LaraDock is shipped with `production-docker-compose.yml` which should contain only the containers you are planning to run on production (usage exampe: `docker-compose -f production-docker-compose.yml up -d nginx mysql redis ...`).
-
-Note: The Database (MySQL/MariaDB/...) ports should not be forwarded on production, because Docker will automatically publish the port on the host, which is quite insecure, unless specifically told not to. So make sure to remove these lines:
-
-```
-ports:
-    - "3306:3306"
-```
-
-To learn more about how Docker publishes ports, please read [this excellent post on the subject](https://fralef.me/docker-and-iptables.html).
-
-
-
-
-
-
-<br>
-<a name="Digital-Ocean"></a>
-### Setup Laravel and Docker on Digital Ocean
-
-####[Full Guide Here](https://github.com/LaraDock/laradock/blob/master/_guides/digital_ocean.md)
-
-
-
-
-
-
 <br>
 <a name="Laravel"></a>
 
@@ -620,7 +585,6 @@ Since the new Laravel application is in the `my-cool-app` folder, we need to rep
 cd my-cool-app
 ```
 
-5 - Go back to the LaraDock installation steps to see how to edit the `.env` file.
 
 
 
